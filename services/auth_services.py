@@ -93,7 +93,7 @@ def login_user_in_db(user_data):
             return {"error": "Invalid Username or Password"}
 
         # vverify the password against the database hash
-        is_valid = security.verify_password(user_data.password, db_user['salt'], db_user['password_hash'])
+        is_valid = security.verify_password(user_data.password, db_user[1], db_user[0])
 
         if is_valid:
             return {"message": "Login Successful"}
