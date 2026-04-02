@@ -56,7 +56,7 @@ def register_user_in_db(user_data):
          return existing_user
       if existing_user:
          # returns db connection error 
-         return{"error": "Username Already Exists"}
+         return{"error": "Username Already Exists"} 
       
       # Bcrypt
       salt = security.generate_salt()

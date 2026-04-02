@@ -9,7 +9,7 @@ Instead of putting all my code in one massive file, I learned how to organize a 
 - **Cryptography & Bcrypt:** I learned why plain text passwords are dangerous and how to use the industry-standard `bcrypt` library to apply slow-hashing algorithms that prevent brute-force attacks.
 - **Salting & Peppering:** I learned how to use Python's `os.urandom` to generate a unique 16-byte hex "salt" for every user to defeat dictionary attacks. I also learned how to implement a hidden constant "pepper" for an extra layer of backend security, while navigating bcrypt's strict 72-byte limit.
 - **Role-Based Access Control (RBAC):** I learned how to design a relational database with a `roles` table (Admin, Educator, User) and how to enforce a default role (`DEFAULT 3`) directly at the database level instead of relying on the API logic.
-- **Bulletproof Database Cursors:** When the official `mysql-connector-python` library had quirks with `dictionary=True`, I learned how to manually map database column names to row data using `cursor.description` and Python's `zip()` function to guarantee clean JSON responses.
+- **Database Result Mapping:** I learned how to handle raw data returned from MySQL as Tuples. I practiced accessing specific database fields using Python's integer indexing (e.g., `row[0]`) to retrieve usernames, salts, and hashes during the authentication process.
 - **Git & Environment Management:** I learned how to use a `.gitignore` file to keep my repository clean by ignoring the massive `venv/` folder, and how to use `pip freeze > requirements.txt` so other developers can easily install my project's dependencies.
 
 ## Tech Stack
