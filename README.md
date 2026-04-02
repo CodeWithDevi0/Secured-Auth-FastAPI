@@ -21,3 +21,6 @@ Instead of putting all my code in one massive file, I learned how to organize a 
 ## Current Features
 - `POST /api/auth/register` — Securely registers a new user with a uniquely salted and peppered password hash, automatically assigning them a default standard user role.
 - `POST /api/auth/login` — Authenticates a user by retrieving their unique salt from the database and verifying their credentials against the stored hash.
+
+## WIP
+- `Not finish yet` - This repository is solely my practice area
